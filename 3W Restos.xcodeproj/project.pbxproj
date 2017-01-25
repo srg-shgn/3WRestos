@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		075342561E31692D0092BAE7 /* RestosListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075342551E31692D0092BAE7 /* RestosListVC.swift */; };
+		075342581E3178AB0092BAE7 /* RestoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075342571E3178AB0092BAE7 /* RestoDetailVC.swift */; };
+		0753425A1E31790F0092BAE7 /* RestoMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075342591E31790F0092BAE7 /* RestoMapVC.swift */; };
+		0753425C1E31792C0092BAE7 /* AddRestoMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0753425B1E31792C0092BAE7 /* AddRestoMapVC.swift */; };
+		0753425E1E3179620092BAE7 /* SaveRestoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0753425D1E3179620092BAE7 /* SaveRestoVC.swift */; };
+		351FB4F81E2E2741009A29B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351FB4F71E2E2741009A29B1 /* AppDelegate.swift */; };
+		351FB4FF1E2E2741009A29B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 351FB4FE1E2E2741009A29B1 /* Assets.xcassets */; };
+		351FB5021E2E2741009A29B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351FB5001E2E2741009A29B1 /* LaunchScreen.storyboard */; };
+		351FB50D1E2E2742009A29B1 /* _W_RestosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351FB50C1E2E2742009A29B1 /* _W_RestosTests.swift */; };
+		351FB5181E2E2742009A29B1 /* _W_RestosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351FB5171E2E2742009A29B1 /* _W_RestosUITests.swift */; };
+		353BCAB21E2E30B90008B389 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCAB11E2E30B90008B389 /* Firebase.framework */; };
+		353BCAB91E2E31000008B389 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCAB31E2E31000008B389 /* FirebaseAnalytics.framework */; };
+		353BCABA1E2E31000008B389 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCAB41E2E31000008B389 /* FirebaseCore.framework */; };
+		353BCABB1E2E31000008B389 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCAB51E2E31000008B389 /* FirebaseInstanceID.framework */; };
+		353BCABC1E2E31000008B389 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCAB61E2E31000008B389 /* GoogleInterchangeUtilities.framework */; };
+		353BCABD1E2E31000008B389 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCAB71E2E31000008B389 /* GoogleSymbolUtilities.framework */; };
+		353BCABE1E2E31000008B389 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCAB81E2E31000008B389 /* GoogleUtilities.framework */; };
+		353BCAC01E2E310D0008B389 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353BCABF1E2E310D0008B389 /* FirebaseDatabase.framework */; };
+		353BCAC61E2E63110008B389 /* Firebase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 353BCAB11E2E30B90008B389 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		353BCAC81E2E6ABB0008B389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353BCAC71E2E6ABB0008B389 /* GoogleService-Info.plist */; };
+		35CC97761E2E72000075F25B /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC97751E2E72000075F25B /* FireBaseService.swift */; };
+		35CC977A1E2E765E0075F25B /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC97791E2E765E0075F25B /* ModelController.swift */; };
+		35CC977C1E2E785F0075F25B /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC977B1E2E785F0075F25B /* Helpers.swift */; };
+		35CC977E1E2E80220075F25B /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC977D1E2E80220075F25B /* Entities.swift */; };
+		35CC97801E30D8C20075F25B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC977F1E30D8C20075F25B /* LocationService.swift */; };
+		35CC97821E30E1FD0075F25B /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC97811E30E1FD0075F25B /* StartVC.swift */; };
+		35CC97841E30E34D0075F25B /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC97831E30E34D0075F25B /* RestaurantService.swift */; };
+		35CC97871E327A820075F25B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CC97851E327A820075F25B /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		351FB5091E2E2742009A29B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 351FB4EC1E2E2741009A29B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 351FB4F31E2E2741009A29B1;
+			remoteInfo = "3W Restos";
+		};
+		351FB5141E2E2742009A29B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 351FB4EC1E2E2741009A29B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 351FB4F31E2E2741009A29B1;
+			remoteInfo = "3W Restos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		353BCAC51E2E63090008B389 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				353BCAC61E2E63110008B389 /* Firebase.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		075342551E31692D0092BAE7 /* RestosListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestosListVC.swift; sourceTree = "<group>"; };
+		075342571E3178AB0092BAE7 /* RestoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoDetailVC.swift; sourceTree = "<group>"; };
+		075342591E31790F0092BAE7 /* RestoMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoMapVC.swift; sourceTree = "<group>"; };
+		0753425B1E31792C0092BAE7 /* AddRestoMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestoMapVC.swift; sourceTree = "<group>"; };
+		0753425D1E3179620092BAE7 /* SaveRestoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveRestoVC.swift; sourceTree = "<group>"; };
+		351FB4F41E2E2741009A29B1 /* 3W Restos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3W Restos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		351FB4F71E2E2741009A29B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		351FB4FE1E2E2741009A29B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		351FB5011E2E2741009A29B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		351FB5031E2E2741009A29B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		351FB5081E2E2742009A29B1 /* 3W RestosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3W RestosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		351FB50C1E2E2742009A29B1 /* _W_RestosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _W_RestosTests.swift; sourceTree = "<group>"; };
+		351FB50E1E2E2742009A29B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		351FB5131E2E2742009A29B1 /* 3W RestosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3W RestosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		351FB5171E2E2742009A29B1 /* _W_RestosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _W_RestosUITests.swift; sourceTree = "<group>"; };
+		351FB5191E2E2742009A29B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		353BCAB11E2E30B90008B389 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		353BCAB31E2E31000008B389 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		353BCAB41E2E31000008B389 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		353BCAB51E2E31000008B389 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		353BCAB61E2E31000008B389 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		353BCAB71E2E31000008B389 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		353BCAB81E2E31000008B389 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		353BCABF1E2E310D0008B389 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
+		353BCAC71E2E6ABB0008B389 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35CC97751E2E72000075F25B /* FireBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseService.swift; sourceTree = "<group>"; };
+		35CC97791E2E765E0075F25B /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		35CC977B1E2E785F0075F25B /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		35CC977D1E2E80220075F25B /* Entities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		35CC977F1E30D8C20075F25B /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		35CC97811E30E1FD0075F25B /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		35CC97831E30E34D0075F25B /* RestaurantService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		35CC97861E327A820075F25B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		351FB4F11E2E2741009A29B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				353BCABD1E2E31000008B389 /* GoogleSymbolUtilities.framework in Frameworks */,
+				353BCAB91E2E31000008B389 /* FirebaseAnalytics.framework in Frameworks */,
+				353BCAB21E2E30B90008B389 /* Firebase.framework in Frameworks */,
+				353BCABA1E2E31000008B389 /* FirebaseCore.framework in Frameworks */,
+				353BCAC01E2E310D0008B389 /* FirebaseDatabase.framework in Frameworks */,
+				353BCABB1E2E31000008B389 /* FirebaseInstanceID.framework in Frameworks */,
+				353BCABC1E2E31000008B389 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				353BCABE1E2E31000008B389 /* GoogleUtilities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		351FB5051E2E2742009A29B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		351FB5101E2E2742009A29B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		351FB4EB1E2E2741009A29B1 = {
+			isa = PBXGroup;
+			children = (
+				351FB4F61E2E2741009A29B1 /* 3W Restos */,
+				351FB50B1E2E2742009A29B1 /* 3W RestosTests */,
+				351FB5161E2E2742009A29B1 /* 3W RestosUITests */,
+				351FB4F51E2E2741009A29B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		351FB4F51E2E2741009A29B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				351FB4F41E2E2741009A29B1 /* 3W Restos.app */,
+				351FB5081E2E2742009A29B1 /* 3W RestosTests.xctest */,
+				351FB5131E2E2742009A29B1 /* 3W RestosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		351FB4F61E2E2741009A29B1 /* 3W Restos */ = {
+			isa = PBXGroup;
+			children = (
+				35CC97731E2E706B0075F25B /* frameworks */,
+				351FB4F71E2E2741009A29B1 /* AppDelegate.swift */,
+				35CC97741E2E71B20075F25B /* Data Access Layer */,
+				35CC97781E2E763F0075F25B /* Business Layer */,
+				35CC97771E2E75EB0075F25B /* Presentation Layer */,
+				35CC977B1E2E785F0075F25B /* Helpers.swift */,
+				351FB4FE1E2E2741009A29B1 /* Assets.xcassets */,
+				351FB5001E2E2741009A29B1 /* LaunchScreen.storyboard */,
+				353BCAC71E2E6ABB0008B389 /* GoogleService-Info.plist */,
+				351FB5031E2E2741009A29B1 /* Info.plist */,
+			);
+			path = "3W Restos";
+			sourceTree = "<group>";
+		};
+		351FB50B1E2E2742009A29B1 /* 3W RestosTests */ = {
+			isa = PBXGroup;
+			children = (
+				351FB50C1E2E2742009A29B1 /* _W_RestosTests.swift */,
+				351FB50E1E2E2742009A29B1 /* Info.plist */,
+			);
+			path = "3W RestosTests";
+			sourceTree = "<group>";
+		};
+		351FB5161E2E2742009A29B1 /* 3W RestosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				351FB5171E2E2742009A29B1 /* _W_RestosUITests.swift */,
+				351FB5191E2E2742009A29B1 /* Info.plist */,
+			);
+			path = "3W RestosUITests";
+			sourceTree = "<group>";
+		};
+		35CC97731E2E706B0075F25B /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				353BCABF1E2E310D0008B389 /* FirebaseDatabase.framework */,
+				353BCAB31E2E31000008B389 /* FirebaseAnalytics.framework */,
+				353BCAB41E2E31000008B389 /* FirebaseCore.framework */,
+				353BCAB51E2E31000008B389 /* FirebaseInstanceID.framework */,
+				353BCAB61E2E31000008B389 /* GoogleInterchangeUtilities.framework */,
+				353BCAB71E2E31000008B389 /* GoogleSymbolUtilities.framework */,
+				353BCAB81E2E31000008B389 /* GoogleUtilities.framework */,
+				353BCAB11E2E30B90008B389 /* Firebase.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		35CC97741E2E71B20075F25B /* Data Access Layer */ = {
+			isa = PBXGroup;
+			children = (
+				35CC97751E2E72000075F25B /* FireBaseService.swift */,
+				35CC977F1E30D8C20075F25B /* LocationService.swift */,
+				35CC97831E30E34D0075F25B /* RestaurantService.swift */,
+			);
+			name = "Data Access Layer";
+			sourceTree = "<group>";
+		};
+		35CC97771E2E75EB0075F25B /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				35CC97851E327A820075F25B /* Main.storyboard */,
+				35CC97811E30E1FD0075F25B /* StartVC.swift */,
+				075342551E31692D0092BAE7 /* RestosListVC.swift */,
+				075342571E3178AB0092BAE7 /* RestoDetailVC.swift */,
+				075342591E31790F0092BAE7 /* RestoMapVC.swift */,
+				0753425B1E31792C0092BAE7 /* AddRestoMapVC.swift */,
+				0753425D1E3179620092BAE7 /* SaveRestoVC.swift */,
+			);
+			name = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		35CC97781E2E763F0075F25B /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				35CC97791E2E765E0075F25B /* ModelController.swift */,
+				35CC977D1E2E80220075F25B /* Entities.swift */,
+			);
+			name = "Business Layer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		351FB4F31E2E2741009A29B1 /* 3W Restos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 351FB51C1E2E2742009A29B1 /* Build configuration list for PBXNativeTarget "3W Restos" */;
+			buildPhases = (
+				351FB4F01E2E2741009A29B1 /* Sources */,
+				351FB4F11E2E2741009A29B1 /* Frameworks */,
+				351FB4F21E2E2741009A29B1 /* Resources */,
+				353BCAC51E2E63090008B389 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "3W Restos";
+			productName = "3W Restos";
+			productReference = 351FB4F41E2E2741009A29B1 /* 3W Restos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		351FB5071E2E2742009A29B1 /* 3W RestosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 351FB51F1E2E2742009A29B1 /* Build configuration list for PBXNativeTarget "3W RestosTests" */;
+			buildPhases = (
+				351FB5041E2E2742009A29B1 /* Sources */,
+				351FB5051E2E2742009A29B1 /* Frameworks */,
+				351FB5061E2E2742009A29B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				351FB50A1E2E2742009A29B1 /* PBXTargetDependency */,
+			);
+			name = "3W RestosTests";
+			productName = "3W RestosTests";
+			productReference = 351FB5081E2E2742009A29B1 /* 3W RestosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		351FB5121E2E2742009A29B1 /* 3W RestosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 351FB5221E2E2742009A29B1 /* Build configuration list for PBXNativeTarget "3W RestosUITests" */;
+			buildPhases = (
+				351FB50F1E2E2742009A29B1 /* Sources */,
+				351FB5101E2E2742009A29B1 /* Frameworks */,
+				351FB5111E2E2742009A29B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				351FB5151E2E2742009A29B1 /* PBXTargetDependency */,
+			);
+			name = "3W RestosUITests";
+			productName = "3W RestosUITests";
+			productReference = 351FB5131E2E2742009A29B1 /* 3W RestosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		351FB4EC1E2E2741009A29B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = 3wa;
+				TargetAttributes = {
+					351FB4F31E2E2741009A29B1 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NUSHJ5A6WM;
+						ProvisioningStyle = Automatic;
+					};
+					351FB5071E2E2742009A29B1 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NUSHJ5A6WM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 351FB4F31E2E2741009A29B1;
+					};
+					351FB5121E2E2742009A29B1 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NUSHJ5A6WM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 351FB4F31E2E2741009A29B1;
+					};
+				};
+			};
+			buildConfigurationList = 351FB4EF1E2E2741009A29B1 /* Build configuration list for PBXProject "3W Restos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 351FB4EB1E2E2741009A29B1;
+			productRefGroup = 351FB4F51E2E2741009A29B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				351FB4F31E2E2741009A29B1 /* 3W Restos */,
+				351FB5071E2E2742009A29B1 /* 3W RestosTests */,
+				351FB5121E2E2742009A29B1 /* 3W RestosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		351FB4F21E2E2741009A29B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				351FB5021E2E2741009A29B1 /* LaunchScreen.storyboard in Resources */,
+				353BCAC81E2E6ABB0008B389 /* GoogleService-Info.plist in Resources */,
+				351FB4FF1E2E2741009A29B1 /* Assets.xcassets in Resources */,
+				35CC97871E327A820075F25B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		351FB5061E2E2742009A29B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		351FB5111E2E2742009A29B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		351FB4F01E2E2741009A29B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0753425E1E3179620092BAE7 /* SaveRestoVC.swift in Sources */,
+				35CC97801E30D8C20075F25B /* LocationService.swift in Sources */,
+				35CC977E1E2E80220075F25B /* Entities.swift in Sources */,
+				0753425A1E31790F0092BAE7 /* RestoMapVC.swift in Sources */,
+				075342581E3178AB0092BAE7 /* RestoDetailVC.swift in Sources */,
+				075342561E31692D0092BAE7 /* RestosListVC.swift in Sources */,
+				35CC977A1E2E765E0075F25B /* ModelController.swift in Sources */,
+				35CC97841E30E34D0075F25B /* RestaurantService.swift in Sources */,
+				351FB4F81E2E2741009A29B1 /* AppDelegate.swift in Sources */,
+				35CC977C1E2E785F0075F25B /* Helpers.swift in Sources */,
+				35CC97761E2E72000075F25B /* FireBaseService.swift in Sources */,
+				35CC97821E30E1FD0075F25B /* StartVC.swift in Sources */,
+				0753425C1E31792C0092BAE7 /* AddRestoMapVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		351FB5041E2E2742009A29B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				351FB50D1E2E2742009A29B1 /* _W_RestosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		351FB50F1E2E2742009A29B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				351FB5181E2E2742009A29B1 /* _W_RestosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		351FB50A1E2E2742009A29B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 351FB4F31E2E2741009A29B1 /* 3W Restos */;
+			targetProxy = 351FB5091E2E2742009A29B1 /* PBXContainerItemProxy */;
+		};
+		351FB5151E2E2742009A29B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 351FB4F31E2E2741009A29B1 /* 3W Restos */;
+			targetProxy = 351FB5141E2E2742009A29B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		351FB5001E2E2741009A29B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				351FB5011E2E2741009A29B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		35CC97851E327A820075F25B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35CC97861E327A820075F25B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		351FB51A1E2E2742009A29B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		351FB51B1E2E2742009A29B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		351FB51D1E2E2742009A29B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NUSHJ5A6WM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+				);
+				INFOPLIST_FILE = "3W Restos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.3wa.-W-Restos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		351FB51E1E2E2742009A29B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NUSHJ5A6WM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+					"$(PROJECT_DIR)/3W\\ Restos",
+				);
+				INFOPLIST_FILE = "3W Restos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.3wa.-W-Restos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		351FB5201E2E2742009A29B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NUSHJ5A6WM;
+				INFOPLIST_FILE = "3W RestosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.3wa.-W-RestosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3W Restos.app/3W Restos";
+			};
+			name = Debug;
+		};
+		351FB5211E2E2742009A29B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NUSHJ5A6WM;
+				INFOPLIST_FILE = "3W RestosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.3wa.-W-RestosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3W Restos.app/3W Restos";
+			};
+			name = Release;
+		};
+		351FB5231E2E2742009A29B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NUSHJ5A6WM;
+				INFOPLIST_FILE = "3W RestosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.3wa.-W-RestosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "3W Restos";
+			};
+			name = Debug;
+		};
+		351FB5241E2E2742009A29B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NUSHJ5A6WM;
+				INFOPLIST_FILE = "3W RestosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.3wa.-W-RestosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "3W Restos";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		351FB4EF1E2E2741009A29B1 /* Build configuration list for PBXProject "3W Restos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				351FB51A1E2E2742009A29B1 /* Debug */,
+				351FB51B1E2E2742009A29B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		351FB51C1E2E2742009A29B1 /* Build configuration list for PBXNativeTarget "3W Restos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				351FB51D1E2E2742009A29B1 /* Debug */,
+				351FB51E1E2E2742009A29B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		351FB51F1E2E2742009A29B1 /* Build configuration list for PBXNativeTarget "3W RestosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				351FB5201E2E2742009A29B1 /* Debug */,
+				351FB5211E2E2742009A29B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		351FB5221E2E2742009A29B1 /* Build configuration list for PBXNativeTarget "3W RestosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				351FB5231E2E2742009A29B1 /* Debug */,
+				351FB5241E2E2742009A29B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 351FB4EC1E2E2741009A29B1 /* Project object */;
+}

@@ -12,6 +12,8 @@ class StartVC: UIViewController {
     
     var model = ModelController()
     
+    @IBOutlet weak var restosBtn: UIButton!
+    
     @IBAction func pressAddResto() {
         for index in 1...20 {
             let name = "Resto \(index)"
@@ -32,7 +34,9 @@ class StartVC: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case false : print("Error !!!")
-                case true: print("Success !!!")
+                case true:
+                    print("Success !!!")
+                    self.restosBtn.isEnabled = true
                 }
             }
         }
@@ -44,15 +48,16 @@ class StartVC: UIViewController {
             //si on navigue vers un navigationCOntroller il faut ajouter if let navigation = segue.destination as? UINavigationController
             //ci dessous, le if s'applique aux 2 expressions
             if let navigation = segue.destination as? UINavigationController, let restosListVC = navigation.topViewController as? RestosListVC {
-                restosListVC.delegate = self
+                //restosListVC.delegate = self
+                restosListVC.model = model
             }
         }
     }
 }
 
-extension StartVC: RestosListVCDelegate {
-    func getModel() -> ModelController {
-        return model
-    }
-}
+//extension StartVC: RestosListVCDelegate {
+//    func getModel() -> ModelController {
+//        return model
+//    }
+//}
 

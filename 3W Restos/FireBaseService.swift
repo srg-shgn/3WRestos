@@ -9,6 +9,8 @@
 import Foundation
 import Firebase
 
+//import FirebaseStorage
+
 class FireBaseService {
     var ref: FIRDatabaseReference!
     
@@ -28,6 +30,11 @@ class FireBaseService {
         restaurants.child("position").child("lat").setValue(position.lat)
         restaurants.child("description").setValue(description)
     }
+    
+    func uploadImageResto() {
+//        let refStorage = FIRStorage
+    }
+    
     
     /*
     //func ci dessous est asynchrone => va envoyer une variable de type [Restaurant] via l'argument "completion"

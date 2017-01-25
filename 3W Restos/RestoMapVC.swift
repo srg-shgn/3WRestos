@@ -114,7 +114,7 @@ extension RestoMapVC: MKMapViewDelegate {
         let restoAnnotation = view.annotation as! RestoAnnotation
         let idResto = restoAnnotation.resto.idRestaurant
         //let restoDetailVC = restoDetailVC() //cette méthode d'instanciation, ne permet pas de récupérer les éléments graphique du storyboard
-        //du coup, on utilisera la fonction ci dessous qui crée une instance de notre objet à partir de la version du storyboard
+        //du coup, on utilisera la fonction ci dessous qui crée une instance de notre objet à partir de la version du storyboard, ne pas oublier de lui donner un storyboardID dans le storyboard
         //NE PAS OUBLIER DE DOWNCASTER EN RestoDetailVC pour accéder à ses propriétés
         let restoDetailVC = storyboard?.instantiateViewController(withIdentifier: "restoDetailID") as! RestoDetailVC
         restoDetailVC.model = model

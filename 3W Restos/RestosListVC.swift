@@ -11,7 +11,7 @@ import UIKit
 class RestosListVC: UIViewController {
     
     var model: ModelController!
-    var delegate: RestosListVCDelegate?
+    //var delegate: RestosListVCDelegate?
     var dataSource: RestosTableViewDataSource?
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,11 +21,14 @@ class RestosListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        model = delegate?.getModel()
+        //model = delegate?.getModel()
         dataSource = RestosTableViewDataSource(model: model)
         tableView.dataSource = dataSource
-        
-        print(model.restaurants.count)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        refresh()
+        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,12 +44,24 @@ class RestosListVC: UIViewController {
             }
         }
     }
-
+    
+    func refresh() {
+        model.refreshRestaurants() { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case false : print("Error !!!")
+                case true:
+                    print("Success in RestoListVC!!!")
+                }
+            }
+        }
+    }
 }
 
-protocol RestosListVCDelegate {
-    func getModel() -> ModelController
-}
+
+//protocol RestosListVCDelegate {
+//    func getModel() -> ModelController
+//}
 
 // MARK: - Data Source
 
@@ -77,6 +92,7 @@ class RestoCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     

@@ -20,21 +20,36 @@ class FireBaseService {
         ref = FIRDatabase.database().reference()
     }
     
-    func addNewRestaurant(name: String, address: String, price: String, description: String, position: Position) {
+    func addNewRestaurant(name: String, address: String, price: String, description: String, position: Position, restoImage: UIImage) {
+        
+        //Prepare for upload Image on Firebase
+        let imageName = NSUUID().uuidString //cree un id unique de type String
+        let storageRef = FIRStorage.storage().reference().child("\(imageName)")
+        if let uploadData = UIImageJPEGRepresentation(restoImage, 0.7) {
+            storageRef.put(uploadData, metadata: nil, completion:
+            { (metadata, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                if let imageUrl = metadata?.downloadURL()?.absoluteString {
+                    self.createNewRestaurantInFB(name: name, address: address, price: price, description: description, position: position, imageUrl: imageUrl)
+                }
+            })
+            
+        }
+    }
+    
+    private func createNewRestaurantInFB (name: String, address: String, price: String, description: String, position: Position, imageUrl: String) {
         let restaurants = ref.child("restaurants").childByAutoId()
         restaurants.child("name").setValue(name)
-        restaurants.child("image").setValue("")
+        restaurants.child("imageUrl").setValue(imageUrl)
         restaurants.child("address").setValue(address)
         restaurants.child("price").setValue(price)
         restaurants.child("position").child("lon").setValue(position.lon)
         restaurants.child("position").child("lat").setValue(position.lat)
         restaurants.child("description").setValue(description)
     }
-    
-    func uploadImageResto() {
-//        let refStorage = FIRStorage
-    }
-    
     
     /*
     //func ci dessous est asynchrone => va envoyer une variable de type [Restaurant] via l'argument "completion"

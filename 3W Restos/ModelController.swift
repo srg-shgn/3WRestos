@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 class ModelController {
     
@@ -17,8 +18,8 @@ class ModelController {
     private let restaurantService = RestaurantService()
     private let locationService = LocationService()
 
-    func addNewRestaurant(name: String, address: String, price: String, description: String, position: Position) {
-        restaurantService.addNewRestaurant(name: name, address: address, price: price, description: description, position: position)
+    func addNewRestaurant(name: String, address: String, price: String, description: String, position: Position, restoImage: UIImage) {
+        restaurantService.addNewRestaurant(name: name, address: address, price: price, description: description, position: position, restoImage: restoImage)
      }
     
     func refreshRestaurants(completion: @escaping (Bool)->()) {

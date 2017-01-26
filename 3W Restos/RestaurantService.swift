@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RestaurantService {
     let fbService = FireBaseService()
@@ -21,7 +22,8 @@ class RestaurantService {
         }
     }
     
-    func addNewRestaurant(name: String, address: String, price: String, description: String, position: Position) {
-        fbService.addNewRestaurant(name: name,address: address, price: price, description: description, position: position)
+    func addNewRestaurant(name: String, address: String, price: String, description: String, position: Position, restoImage: UIImage) {
+        fbService.addNewRestaurant(name: name,address: address, price: price, description: description, position: position, restoImage: restoImage)
     }
+    
 }

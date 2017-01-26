@@ -29,7 +29,7 @@ class SaveRestoVC: UIViewController {
     }
     
     @IBAction func pressSave(_ sender: UIBarButtonItem) {
-        print(priceSegmentedControl.selectedSegmentIndex)
+        
         var price: String
         switch priceSegmentedControl.selectedSegmentIndex {
         case 0:
@@ -53,10 +53,12 @@ class SaveRestoVC: UIViewController {
         let name = nameTF.text
         let description = descriptionTF.text
         
-        model.addNewRestaurant(name: name!, address: addressSelected, price: price, description: description!, position: newPosition)
-        
-        
-        
+        if let myImage = restoImage.image {
+            model.addNewRestaurant(name: name!, address: addressSelected, price: price, description: description!, position: newPosition, restoImage: myImage)
+        } else {
+            buildAlert(msg: "Merci d'ajouter une photo !")
+            return
+        }
         
         let restoListVC = self.storyboard?.instantiateViewController(withIdentifier: "restoListID") as! RestosListVC
         restoListVC.model = self.model

@@ -23,7 +23,7 @@ struct Restaurant {
     let idRestaurant: String
     let name: String
     let address: String
-    let image: String
+    let imageUrl: String
     let price: String
     let position: Position
     let description: String
@@ -37,7 +37,7 @@ extension Restaurant {
         
         let id = id as String
         guard let name = value["name"] as? String,
-            let image = value["image"] as? String,
+            let imageUrl = value["imageUrl"] as? String,
             let address = value["address"] as? String,
             let price = value["price"] as? String,
             let position = value["position"] as? [String:Double],
@@ -50,7 +50,7 @@ extension Restaurant {
         self.idRestaurant = id
         self.name = name
         self.address = address
-        self.image = image
+        self.imageUrl = imageUrl
         self.price = price
         self.position = Position(lat: lat, lon: lon)
         self.description = description

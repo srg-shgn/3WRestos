@@ -20,7 +20,7 @@ class StartVC: UIViewController {
             let address = "\(index) rue René CLair, 75012 paris"
             let description = "cuisine traditionelle \(index)"
             let newPosition = Position(lat: 48.8935+(Double(index)/10000.0), lon: 2.3528+(Double(index)/1000.0))
-            model.addNewRestaurant(name: name, address: address, price: "€", description: description, position: newPosition)
+            //model.addNewRestaurant(name: name, address: address, price: "€", description: description, position: newPosition)
         }
     }
     

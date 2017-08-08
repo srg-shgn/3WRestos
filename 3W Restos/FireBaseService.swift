@@ -24,7 +24,8 @@ class FireBaseService {
         
         //Prepare for upload Image on Firebase
         let imageName = NSUUID().uuidString //cree un id unique de type String
-        let storageRef = FIRStorage.storage().reference().child("\(imageName)")
+        //let storageRef = FIRStorage.storage().reference().child("\(imageName)")
+        let storageRef = FIRStorage.storage().reference().child("restaurant_images").child("\(imageName)")
         if let uploadData = UIImageJPEGRepresentation(restoImage, 0.7) {
             storageRef.put(uploadData, metadata: nil, completion:
             { (metadata, error) in

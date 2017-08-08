@@ -96,6 +96,8 @@ class RestoCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     
+    @IBOutlet weak var restoImageView: UIImageView!
+    
     func configure(with resto: Restaurant) {
         nameLabel.text = resto.name
         priceLabel.text = "\(resto.price)"
@@ -105,6 +107,37 @@ class RestoCell: UITableViewCell {
         } else {
             distanceLabel.text = ""
         }
+        //Recupère l'image du resto stockée dans le storage de Firebase
+        
+        restoImageView.image = UIImage(named: "restaurant-1")
+        
+        let imageRestoUrl = resto.imageUrl
+        print("*** imageRestoUrl ***")
+        print(imageRestoUrl)
+        let url = URL(fileURLWithPath: imageRestoUrl)
+        print("*** URL DEBUT***")
+        print(url)
+        print("*** URL FIN ***")
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print("*** error ***")
+                print(error!)
+                return
+            }
+            guard let response = response as? HTTPURLResponse else {
+                print("WebServiceError.badRequest")
+                return
+            }
+            let statusCode = response.statusCode
+            print("*** response ***")
+            print("statusCode = \(statusCode)")
+            DispatchQueue.main.async {
+                self.restoImageView.image = UIImage(data: data!)
+                print("*** data ***")
+                print(data!)
+            }
+        }.resume()
+
     }
 }
 

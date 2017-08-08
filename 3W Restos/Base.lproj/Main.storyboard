@@ -82,7 +82,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AqK-pd-VV6" id="jvV-pA-Nh8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-JC-ls5">
@@ -141,6 +141,7 @@
                                             <outlet property="distanceLabel" destination="eFY-70-Z6j" id="N3Q-5R-iDZ"/>
                                             <outlet property="nameLabel" destination="5Oz-JC-ls5" id="AGo-Ys-ejK"/>
                                             <outlet property="priceLabel" destination="Rhz-mJ-1iD" id="AOZ-C1-Skk"/>
+                                            <outlet property="restoImageView" destination="tOz-1g-V7l" id="jrw-ab-ymv"/>
                                             <segue destination="rCt-kb-ebT" kind="show" identifier="presentDetails" id="ERb-t2-gsV"/>
                                         </connections>
                                     </tableViewCell>
@@ -598,7 +599,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="tLo-PK-lNM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eX7-hE-PeH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eX7-hE-PeH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
